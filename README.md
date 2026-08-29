@@ -143,6 +143,8 @@ O projeto utilizará inicialmente:
 - Pandas
 - Python-dotenv
 - Pytest
+- pyarrow
+- sqlalchemy
 
 Novas tecnologias poderão ser adicionadas conforme a evolução do projeto.
 
