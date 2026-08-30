@@ -146,11 +146,21 @@ def convert_numeric_columns(df):
 
 
 def remove_duplicates(df):
-    comparison_columns = [
-        column
-        for column in df.columns
-        if column != "source_file"
-    ]
+    comparison_columns = []
+
+    for column in df.columns:
+        if column == "source_file":
+            continue
+
+        has_unhashable = df[column].apply(
+            lambda value: isinstance(
+                value,
+                (list, dict)
+            )
+        ).any()
+
+        if not has_unhashable:
+            comparison_columns.append(column)
 
     if comparison_columns:
         df = df.drop_duplicates(
@@ -165,9 +175,13 @@ def transform_dataframe(df):
         return df
 
     df = normalize_columns(df)
+
     df = clean_strings(df)
+
     df = convert_datetime_columns(df)
+
     df = convert_numeric_columns(df)
+
     df = remove_duplicates(df)
 
     df = df.reset_index(drop=True)
@@ -210,15 +224,29 @@ def transform_endpoint(endpoint_path):
 
     bronze_rows = len(df)
 
-    print(f"Registros encontrados na Bronze: {bronze_rows:,}")
+    print(
+        f"Registros encontrados na Bronze: "
+        f"{bronze_rows:,}"
+    )
 
     df = transform_dataframe(df)
 
     silver_rows = len(df)
 
-    print(f"Registros após transformação: {silver_rows:,}")
-    print(f"Duplicatas removidas: {bronze_rows - silver_rows:,}")
-    print(f"Quantidade de colunas: {len(df.columns)}")
+    print(
+        f"Registros após transformação: "
+        f"{silver_rows:,}"
+    )
+
+    print(
+        f"Duplicatas removidas: "
+        f"{bronze_rows - silver_rows:,}"
+    )
+
+    print(
+        f"Quantidade de colunas: "
+        f"{len(df.columns)}"
+    )
 
     save_silver(
         endpoint,
@@ -231,7 +259,10 @@ def main():
     print("Iniciando transformação Bronze -> Silver")
 
     if not BRONZE_PATH.exists():
-        print(f"Pasta Bronze não encontrada: {BRONZE_PATH}")
+        print(
+            f"Pasta Bronze não encontrada: "
+            f"{BRONZE_PATH}"
+        )
         return
 
     endpoint_paths = sorted(
@@ -241,13 +272,21 @@ def main():
     )
 
     if not endpoint_paths:
-        print("Nenhum endpoint encontrado na camada Bronze.")
+        print(
+            "Nenhum endpoint encontrado "
+            "na camada Bronze."
+        )
         return
 
-    print(f"Endpoints encontrados: {len(endpoint_paths)}")
+    print(
+        f"Endpoints encontrados: "
+        f"{len(endpoint_paths)}"
+    )
 
     for endpoint_path in endpoint_paths:
-        transform_endpoint(endpoint_path)
+        transform_endpoint(
+            endpoint_path
+        )
 
     print()
     print("=" * 60)
