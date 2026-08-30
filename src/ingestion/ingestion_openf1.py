@@ -24,6 +24,7 @@ def save_bronze(endpoint, data, file_name):
             indent=4
         )
 
+
 response = requests.get(
     f"{BASE_URL}/drivers",
     params={
@@ -35,9 +36,10 @@ response.raise_for_status()
 
 drivers = response.json()
 
-for driver in drivers:
 
+for driver in drivers:
     driver_number = driver["driver_number"]
+    last_name = driver["last_name"]
     full_name = driver["full_name"]
 
     print(f"Buscando telemetria de {full_name}...")
@@ -54,7 +56,7 @@ for driver in drivers:
 
     data = response.json()
 
-    file_name = f"driver_{driver_number}.json"
+    file_name = f"{last_name.lower()}.json"
 
     save_bronze(
         "car_data",
