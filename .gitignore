@@ -20,12 +20,6 @@ venv/
 # Logs
 logs/*.log
 
-# Dados gerados pelo pipeline
-data/raw/*
-data/bronze/*
-data/silver/*
-data/gold/*
-
 # Mantém as pastas no Git
 !data/raw/.gitkeep
 !data/bronze/.gitkeep
