@@ -1,6 +1,7 @@
-requests
-python-dotenv
-pandas
-pytest
-pyarrow
-sqlalchemy
+requests>=2.31,<3
+python-dotenv>=1.0,<2
+pandas>=2.1,<4
+pytest>=8,<10
+pyarrow>=14,<26
+sqlalchemy>=2,<3
+psycopg[binary]>=3.2,<4

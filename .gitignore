@@ -17,8 +17,23 @@ venv/
 # Jupyter
 .ipynb_checkpoints/
 
+.github/
+tests/
+
 # Logs
 logs/*.log
+logs/*.json
+logs/executions/
+logs/metabase-config.json
+
+# Runtime data
+data/bronze/run_id=*/
+data/silver/session_key=*/
+data/gold/session_key=*/
+
+# Test and tooling caches
+.pytest_cache/
+.ruff_cache/
 
 # Mantém as pastas no Git
 !data/raw/.gitkeep
