@@ -191,7 +191,11 @@ openf1-data-engineering/
 ├── assets/
 │   ├── openf1-arquitetura.png
 │   ├── openf1-capa.png
-│   └── openf1-telemetria.png
+│   ├── openf1-telemetria.png
+│   └── prints/
+│       ├── 01-metabase-dashboard-sessao.png
+│       ├── 11-airflow-grafo-dag.png
+│       └── 15-airflow-detalhes-dag.png
 ├── config/
 │   ├── __init__.py
 │   └── settings.py
@@ -432,6 +436,20 @@ O roadmap completo, com prioridade, dependências e critérios de aceite, está 
 ### Ambiente integrado entregue
 
 O roteiro completo está em [serviços e entrega](docs/servicos-e-entrega.md). PostgreSQL foi validado com duas recargas, chaves primárias, JSONB e consultas SQL. A nova coleta de 05/09/2026 confirmou os mesmos volumes da sessão 9158. Airflow executou o pipeline e conferiu o banco com sucesso. Metabase possui dois dashboards, 19 análises e filtros de sessão e piloto. A suíte e o CI incluem verificações de contrato, fronteiras temporais e recuperação.
+
+### Evidências visuais dos serviços
+
+As capturas abaixo foram feitas nas páginas reais dos serviços locais, usando os dados da sessão 9158:
+
+![Dashboard real de desempenho da sessão](docs/imagens/prints/01-metabase-dashboard-sessao.png)
+
+![Dashboard real de telemetria e voltas](docs/imagens/prints/02-metabase-dashboard-telemetria.png)
+
+![Consulta analítica real no Metabase](docs/imagens/prints/05-metabase-consulta-telemetria-volta.png)
+
+![Airflow real com a execução da DAG](docs/imagens/prints/12-airflow-execucao-sucesso.png)
+
+O conjunto completo está no [índice de imagens da documentação](docs/README.md), incluindo a conexão PostgreSQL, o catálogo de DAGs, o grafo de tarefas e a página inicial do Airflow.
 
 ```bash
 mkdir -p logs
