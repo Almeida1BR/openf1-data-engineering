@@ -14,8 +14,11 @@
 
 ## Imagens
 
-As imagens raster foram geradas para este projeto com tema visual de Fórmula 1 e são usadas como material editorial:
+O conjunto visual combina imagens editoriais em tema de Fórmula 1 com prints reais das páginas locais do Metabase e do Airflow. Os prints estão separados em `imagens/prints/`:
 
+- [`imagens/openf1-capa.png`](imagens/openf1-capa.png): capa editorial do projeto;
+- [`imagens/openf1-arquitetura.png`](imagens/openf1-arquitetura.png): arquitetura visual do pipeline;
+- [`imagens/openf1-telemetria.png`](imagens/openf1-telemetria.png): escopo da telemetria individual;
 - [`imagens/prints/01-metabase-dashboard-sessao.png`](imagens/prints/01-metabase-dashboard-sessao.png): dashboard real de desempenho;
 - [`imagens/prints/02-metabase-dashboard-telemetria.png`](imagens/prints/02-metabase-dashboard-telemetria.png): dashboard real de telemetria;
 - [`imagens/prints/03-metabase-consulta-melhor-volta.png`](imagens/prints/03-metabase-consulta-melhor-volta.png): análise de melhor volta;

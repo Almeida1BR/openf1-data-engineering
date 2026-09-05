@@ -1,6 +1,6 @@
 # Modelo analítico da camada Gold
 
-![Consulta real de telemetria por volta](imagens/prints/05-metabase-consulta-telemetria-volta.png)
+![Telemetria individual na documentação](imagens/openf1-telemetria.png)
 
 ## 1. Objetivo da Gold
 

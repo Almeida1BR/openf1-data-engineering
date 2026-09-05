@@ -1,6 +1,6 @@
 # Arquitetura do OpenF1 Data Engineering
 
-![Execução real da DAG do projeto](imagens/prints/11-airflow-grafo-dag.png)
+![Arquitetura visual do projeto](imagens/openf1-arquitetura.png)
 
 ## 1. Objetivo arquitetural
 
