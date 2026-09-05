@@ -117,4 +117,12 @@ O script de banco recarrega duas vezes, verifica contagens, chaves, JSONB e cons
 - [API do Metabase](https://www.metabase.com/learn/metabase-basics/administration/administration-and-operation/metabase-api)
 - [Airflow em Docker](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html)
 
-As imagens PNG temáticas são ilustrações editoriais geradas; não são fotografias da execução nem gráficos calculados do dataset. A captura do dashboard demonstra os dados reais no aplicativo.
+As imagens PNG temáticas são ilustrações editoriais de apoio. As capturas de Metabase e Airflow demonstram páginas reais da execução local, incluindo PostgreSQL conectado, consulta Gold, dashboards, catálogo da DAG, grafo de tarefas e execução concluída. Elas não substituem os resultados calculados pelo pipeline; servem como evidência visual complementar.
+
+![Conexão PostgreSQL no Metabase](imagens/prints/06-metabase-postgresql-conexao.png)
+
+![Consulta analítica da camada Gold](imagens/prints/05-metabase-consulta-telemetria-volta.png)
+
+![Catálogo real de DAGs do Airflow](imagens/prints/10-airflow-catalogo-dags.png)
+
+![Grafo real da DAG openf1_sessao](imagens/prints/11-airflow-grafo-dag.png)

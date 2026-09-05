@@ -35,7 +35,7 @@ As tarefas executar e verificar completaram o processamento e a comparação SQL
 
 As 19 consultas retornaram dados: indicadores, análises por piloto e 474 linhas na análise por volta. O bootstrap foi repetido e reutilizou seus IDs. Os dashboards instalados estão em http://localhost:3000/dashboard/2 e http://localhost:3000/dashboard/3.
 
-A inspeção visual confirmou gráficos, indicadores e tabelas em português. O filtro foi alterado para 9160: os cartões exibiram Sem resultados. Ao restaurar o padrão 9158, os dados reapareceram. A captura real está em `docs/imagens/metabase-dashboard.png`.
+A inspeção visual confirmou gráficos, indicadores e tabelas em português. O filtro foi alterado para 9160: os cartões exibiram Sem resultados. Ao restaurar o padrão 9158, os dados reapareceram. As 15 capturas reais estão em `docs/imagens/prints/`, cobrindo dashboards, consultas, PostgreSQL, catálogo Airflow, grafo, tarefas, código, detalhes e execução bem-sucedida.
 
 ## Testes e ferramentas
 

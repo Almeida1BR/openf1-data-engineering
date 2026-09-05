@@ -16,10 +16,20 @@
 
 As imagens raster foram geradas para este projeto com tema visual de Fórmula 1 e são usadas como material editorial:
 
-- [`imagens/openf1-capa.png`](imagens/openf1-capa.png): capa do README;
-- [`imagens/openf1-arquitetura.png`](imagens/openf1-arquitetura.png): fluxo visual das camadas;
-- [`imagens/openf1-telemetria.png`](imagens/openf1-telemetria.png): telemetria individual por piloto;
-- [`imagens/metabase-dashboard.png`](imagens/metabase-dashboard.png): captura real do painel.
-- [`imagens/metabase-telemetria.png`](imagens/metabase-telemetria.png): captura real do painel de telemetria e voltas.
+- [`imagens/prints/01-metabase-dashboard-sessao.png`](imagens/prints/01-metabase-dashboard-sessao.png): dashboard real de desempenho;
+- [`imagens/prints/02-metabase-dashboard-telemetria.png`](imagens/prints/02-metabase-dashboard-telemetria.png): dashboard real de telemetria;
+- [`imagens/prints/03-metabase-consulta-melhor-volta.png`](imagens/prints/03-metabase-consulta-melhor-volta.png): análise de melhor volta;
+- [`imagens/prints/04-metabase-consulta-velocidade.png`](imagens/prints/04-metabase-consulta-velocidade.png): análise de velocidade;
+- [`imagens/prints/05-metabase-consulta-telemetria-volta.png`](imagens/prints/05-metabase-consulta-telemetria-volta.png): telemetria por volta;
+- [`imagens/prints/06-metabase-postgresql-conexao.png`](imagens/prints/06-metabase-postgresql-conexao.png): conexão PostgreSQL real;
+- [`imagens/prints/07-metabase-postgresql-tabelas.png`](imagens/prints/07-metabase-postgresql-tabelas.png): tabelas analíticas disponíveis;
+- [`imagens/prints/08-metabase-colecao-analises.png`](imagens/prints/08-metabase-colecao-analises.png): coleção de análises;
+- [`imagens/prints/09-airflow-inicio.png`](imagens/prints/09-airflow-inicio.png): página inicial do Airflow;
+- [`imagens/prints/10-airflow-catalogo-dags.png`](imagens/prints/10-airflow-catalogo-dags.png): catálogo de DAGs;
+- [`imagens/prints/11-airflow-grafo-dag.png`](imagens/prints/11-airflow-grafo-dag.png): grafo da DAG;
+- [`imagens/prints/12-airflow-execucao-sucesso.png`](imagens/prints/12-airflow-execucao-sucesso.png): execução bem-sucedida;
+- [`imagens/prints/13-airflow-tarefas.png`](imagens/prints/13-airflow-tarefas.png): tarefas da DAG;
+- [`imagens/prints/14-airflow-codigo-dag.png`](imagens/prints/14-airflow-codigo-dag.png): código carregado da DAG;
+- [`imagens/prints/15-airflow-detalhes-dag.png`](imagens/prints/15-airflow-detalhes-dag.png): detalhes operacionais da DAG.
 
 As imagens não são evidência de dados capturados. Os números e regras devem ser conferidos nos Parquets, manifestos, testes e documentação do pipeline.
